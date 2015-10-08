@@ -4,15 +4,17 @@ function initialize() <!-- intialize the actual map -->
 {
   var mapProp = {
     center:myCenter, <!-- center of map. Implement https://developers.google.com/maps/articles/geolocation to get current location  -->
-    zoom:10,
-    mapTypeId:google.maps.MapTypeId.ROADMAP   <!-- ROADMAP is likely the best bet, there are other options like TERRAIN etc -->
+    zoom:14,
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+	scaleControl: true,
+    scaleControlOptions: {position: google.maps.ControlPosition.BOTTOM_LEFT}
   };
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
   
   
   <!-- This creates a basic marker object, it just a position and must be set with marker.setMap(map); -->
   var marker=new google.maps.Marker({
-  position:myCenter, 
+  position:myCenter,
   });
   <!-- this creates a text window above a marker that already exists, so if you want to create a text window for a marker, put in the content and make sure to pass in the marker when declaring the infowindow  -->
   var infowindow = new google.maps.InfoWindow({
