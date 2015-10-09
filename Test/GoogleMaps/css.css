@@ -17,7 +17,31 @@ body {
 	#max-width: 100%;
 }
 footer  {
+	float:left;
 	#margin-bottom:-200px;
 	height:10%;
-	background-color:red;
+	width: 100%;
+	background-color: #0055D4;
+	#position: relative;
+}
+.footerIcon1{
+	 width: 100px;
+	 height: 95px;
+	background-color: red;
+	float:left;
+}
+.footerIcon2{
+	 margin: 0 auto;
+	 background-color: red;
+	 width: 100px;
+	 height: 95px;
+	 
+}
+.footerIcon3{
+	position: relative;
+	 float: right;
+	 margin: 0 auto;
+	 background-color: red;
+	 width: 100px;
+	 height: 95px;
 }
