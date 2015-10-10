@@ -34,8 +34,8 @@ echo "var js_description = ". $js_description . ";\n";
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css.css">
-<!--<script src="http://maps.googleapis.com/maps/api/js"></script> <!-- loads the actual API -->
-<!--<script src="mapsScript.js" type="text/javascript"></script> -->
+<script src="http://maps.googleapis.com/maps/api/js"></script> <!-- loads the actual API -->
+<script src="mapsScript.js" type="text/javascript"></script> -->
 <script type="text/javascript">
  alert(js_lat[0]);
  alert(js_long[0]);
