@@ -34,20 +34,14 @@ echo "var js_description = ". $js_description . ";\n";
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css.css">
-<script src="http://maps.googleapis.com/maps/api/js"></script> <!-- loads the actual API -->
-<script src="mapsScript.js" type="text/javascript"></script> -->
-<script type="text/javascript">
- alert(js_lat[0]);
- alert(js_long[0]);
- alert(js_description[0]);
- alert(js_lat[0]);
-</script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="mapsScript.js" type="text/javascript"></script>
 
 <meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div id="wrapper">
-	<div id="googleMap"><!-- TODO: make map fit to the edges properly. For some reason 100% height does not work. -->
+	<div id="googleMap">
 	</div>
 	<footer> 
 		<div class="footerIcon1"> 
