@@ -16,36 +16,39 @@ function initialize() //intialize the actual map
   
   
   var markers = new Array(js_lat.length);
+  var infowindows = new Array(js_lat.length);
   for(i = 0; i < markers.length; i++){
+	  
 	  var markPosition = new google.maps.LatLng(js_lat[i], js_long[i]);
+	  
 	  markers[i] = new google.maps.Marker({position:markPosition,});
+	  markers[i].setMap(map);
+	  var contentString = 
+	  '<div id="content">'+'<div id="siteNotice">'+'</div>'+'<h1 id="firstHeading" class="firstHeading">'+ js_riverNames[i] + '</h1>'+'<div id="bodyContent">'+'<p> '+ js_riverQuality[i] +' '+ js_riverDanger[i] +'</p>'+'</div>'+'</div>';
+	  
+	  infowindows[i] = new google.maps.InfoWindow({content: contentString});
+	  
+	  google.maps.event.addListener(markers[i], 'click', (function(i) {return function() {infowindows[i].open(map,markers[i]);}})(i));//function() {infowindows[i].open(map,markers[i]);});
   }
   alert(markers[0] + "markers[0]");
+  
   //This creates a basic marker object, it just a position and must be set with marker.setMap(map);
   var marker=new google.maps.Marker({position:myCenter,});
-  //this creates a text window above a marker that already exists, so if you want to create a text window for a marker, put in the content and make sure to pass in the marker when declaring the infowindow
-  var infowindow = new google.maps.InfoWindow({
-  content: contentString
-  });
   
-  var infowindow = new Array(js_lat.length);
-  //for(i = 0; i < markers.length; i++){
-	  
-  //}
+  //this creates a text window above a marker that already exists, so if you want to create a text window for a marker, put in the content and make sure to pass in the marker when declaring the infowindow
+
   //This adds a listener that when the user clicks, it will open the infowindow
-  google.maps.event.addListener(marker, 'click', function() {
-  //the infowindow needs to be given the correct marker that was just clicked on, this could become a problem with lots of different markers and infowindows
-  infowindow.open(map,marker);
-  });
+  //google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker)});
+  
   //make sure to give the infowindow the marker location when declaring it
   //infowindow.open(map, marker);
-  marker.setMap(map);
-  alert("markers");
-  for(i = 0; i < markers.length; i++){
-	  alert(markers[i] + "markers[i]")
-	  markers[i].setMap(map);
-  }
-  alert("markers after");
+  //marker.setMap(map);
+  //alert("markers");
+  //for(i = 0; i < markers.length; i++){
+	//  alert(markers[i] + "markers[i]")
+	//  markers[i].setMap(map);
+  //}
+  //alert("markers after");
 }
 //Add a DOM listener that will execute the initialize() function on window load
 google.maps.event.addDomListener(window, 'load', initialize); 

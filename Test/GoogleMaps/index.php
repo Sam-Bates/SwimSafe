@@ -4,31 +4,43 @@
 
 $db = mysql_connect("localhost","root","bananaunicorn");
 if (!$db) {
-die("Database connection failed miserably: " . mysql_error());
+die("Database connection failed: " . mysql_error());
 }
 
 $db_select = mysql_select_db("fletat1_project",$db);
 if (!$db_select) {
-die("Database selection also failed miserably: " . mysql_error());
+die("Database selection failed: " . mysql_error());
 }
-$result = mysql_query("SELECT * FROM Location", $db);
+$result = mysql_query("SELECT * FROM Location INNER JOIN WaterSource ON Location.waterSourceID=WaterSource.waterSourceID", $db);
 if (!$result) {
 die("Database query failed: " . mysql_error());
 }
 $lat = array();
 $long = array();
-$description = array();
+$directions = array();
+$riverNames = array();
+$riverQuality = array();
+$riverDanger = array();
 while ($row = mysql_fetch_array($result)) {
 		array_push($lat,$row[2]);
 		array_push($long,$row[3]);
-		array_push($description,$row[4]);
+		array_push($directions,$row[4]);
+		array_push($riverNames,$row[7]);
+		array_push($riverQuality,$row[8]);
+		array_push($riverDanger,$row[9]);
 }
 $js_lat = json_encode($lat);
 $js_long = json_encode($long);
-$js_description = json_encode($description);
+$js_directions = json_encode($directions);
+$js_riverNames = json_encode($riverNames);
+$js_riverQuality = json_encode($riverQuality);
+$js_riverDanger = json_encode($riverDanger);
 echo "var js_lat = ". $js_lat . ";\n";
 echo "var js_long = ". $js_long . ";\n";
-echo "var js_description = ". $js_description . ";\n";
+echo "var js_directions = ". $js_directions . ";\n";
+echo "var js_riverNames = ". $js_riverNames . ";\n";
+echo "var js_riverQuality = ". $js_riverQuality . ";\n";
+echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 ?>
 </script>
 <html>
