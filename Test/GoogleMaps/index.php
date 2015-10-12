@@ -59,15 +59,17 @@ echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 <div id="wrapper">
 	<div id="googleMap">
 	</div>
-	<footer> 
-		<div class="footerIcon1"> 
-		
+	<div id="nav"> 
+	<div class="footerIcon3">
+		</div>
+		<div class="footerIcon1">	
 		</div>
 		<div class="footerIcon2">
 		</div>
-		<div class="footerIcon3">
-		</div>
-	</footer>
+		
+		
+		
+	</div>
 </div>
 
 </body>

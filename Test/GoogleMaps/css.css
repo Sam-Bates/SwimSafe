@@ -1,11 +1,6 @@
 * {
 	font-family:Helvetica, sans-serif;
 }
-body {
-	#min-height:100%;
-	#padding:0;
-	#margin:0;
-}
 #wrapper {
 	padding:0;
 	position:absolute;
@@ -16,35 +11,37 @@ body {
 }
 #googleMap {
 	min-height:90%;
-	#max-height:90%;
-	#max-width: 100%;
 }
-footer  {
+#nav  {
 	float:left;
-	#margin-bottom:-200px;
 	height:10%;
 	width: 100%;
 	background-color: #0055D4;
-	#position: relative;
+	overflow: auto;
 }
 .footerIcon1{
-	 width: 100px;
-	 height: 95px;
+	 width: 10%;
+	 height: 100%;
 	background-color: red;
 	float:left;
 }
 .footerIcon2{
 	 margin: 0 auto;
 	 background-color: red;
-	 width: 100px;
-	 height: 95px;
+	 width: 10%;
+	 height: 100%;
 	 
 }
 .footerIcon3{
-	position: relative;
+	 position: relative;
 	 float: right;
-	 margin: 0 auto;
 	 background-color: red;
-	 width: 100px;
-	 height: 95px;
+	 width: 10%;
+	 height: 100%;
+}
+.spacer {
+    #background-color: green;
+    #width: 35%;
+	#height: 100%;
+	
 }
