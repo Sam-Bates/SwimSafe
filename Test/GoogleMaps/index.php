@@ -61,10 +61,13 @@ echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 	</div>
 	<div id="nav"> 
 	<div class="footerIcon3">
+		<img src="Settings.png" height="90-" width="190">
 		</div>
 		<div class="footerIcon1">	
+		<img src="Search.png" height="90-" width="190">
 		</div>
 		<div class="footerIcon2">
+		<img src="Home.png" height="90-" width="190">
 		</div>
 		
 		
