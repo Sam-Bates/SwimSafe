@@ -1,47 +1,50 @@
 * {
-	font-family:Helvetica, sans-serif;
+	font-family: Helvetica, sans-serif;
 }
+
 #wrapper {
-	padding:0;
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #E0DCD5;
 }
+
 #googleMap {
 	min-height:90%;
+	clear: both;
 }
+
 #nav  {
-	float:left;
-	height:10%;
+	height: 10vh;
 	width: 100%;
-	background-color: #0055D4;
 	overflow: auto;
+	position: relative;
 }
-.footerIcon1{
-	 width: 10%;
-	 height: 100%;
-	background-color: white;
-	float:left;
+
+.infoIcon{
+	display: block;
+	width: 10vh;
+	height: 10vh;
+	float: left;
 }
-.footerIcon2{
-	 margin: 0 auto;
-	 background-color: white;
-	 width: 10%;
-	 height: 100%;
-	 
+
+.logoIcon{
+	display: block;
+	margin: 0;
+	position: absolute;
+	height: 10vh;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -0%)
 }
-.footerIcon3{
-	 position: relative;
-	 float: right;
-	 background-color: white;
-	 width: 10%;
-	 height: 100%;
-}
-.spacer {
-    #background-color: green;
-    #width: 35%;
-	#height: 100%;
-	
+
+.helpIcon{
+	display: block;
+	position: relative;
+	float: right;
+	width: 10vh;
+	height: 10vh;
 }

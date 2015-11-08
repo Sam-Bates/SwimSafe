@@ -49,32 +49,21 @@ echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 </script>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css.css">
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="mapsScript.js" type="text/javascript"></script>
-
-<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="mapsScript.js" type="text/javascript"></script>
+	<meta name="viewport" content="width=device-width">
 </head>
+
 <body>
-<div id="wrapper">
-	<div id="googleMap">
+	<div id="wrapper">
+		<nav>
+			<img class="infoIcon" src="InfoIcon.png">
+			<img class="logoIcon" src="LogoIcon.png">
+			<img class="helpIcon" src="HelpIcon.png">
+		</nav>
+		<div id="googleMap">
+		</div>
 	</div>
-	<div id="nav"> 
-	<div class="footerIcon3">
-		<img src="Settings.png" height="90-" width="190">
-		</div>
-		<div class="footerIcon1">	
-		<img src="Search.png" height="90-" width="190">
-		</div>
-		<div class="footerIcon2">
-		<img src="Home.png" height="90-" width="190">
-		</div>
-		
-		
-		
-	</div>
-</div>
-
 </body>
-
 </html>
