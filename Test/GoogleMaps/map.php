@@ -58,7 +58,7 @@ echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 </head>
 
 <body>
-	<div id="wrapper">
+	<div class="wrapper">
 		<nav>
 			<a href="index.html">
 				<img class="infoIcon" src="InfoIcon.png">
