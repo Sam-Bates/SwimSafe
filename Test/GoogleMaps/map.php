@@ -49,7 +49,9 @@ echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 </script>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<title>SwimSafe</title>
+	<link rel="stylesheet" type="text/css" href="DEFAULTcss.css">
+	<link rel="stylesheet" type="text/css" href="MAPcss.css">
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="mapsScript.js" type="text/javascript"></script>
 	<meta name="viewport" content="width=device-width">
@@ -58,9 +60,15 @@ echo "var js_riverDanger = ". $js_riverDanger . ";\n";
 <body>
 	<div id="wrapper">
 		<nav>
-			<img class="infoIcon" src="InfoIcon.png">
-			<img class="logoIcon" src="LogoIcon.png">
-			<img class="helpIcon" src="HelpIcon.png">
+			<a href="index.html">
+				<img class="infoIcon" src="InfoIcon.png">
+			</a>
+			<a href="map.php">
+				<img class="logoIcon" src="LogoIcon.png">
+			</a>
+			<a href="help.html">
+				<img class="helpIcon" src="HelpIcon.png">
+			</a>
 		</nav>
 		<div id="googleMap">
 		</div>
