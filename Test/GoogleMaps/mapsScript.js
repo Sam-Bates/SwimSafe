@@ -44,7 +44,7 @@ function initialize()
 
     //Content string used to create infowindow contents
 	  var contentString = 
-	  '<div id="content">'+'<h1 id="firstHeading" class="firstHeading">'+ js_riverNames[i] + '</h1>'+'<div id="bodyContent">'+'<h3>Directions: </h3>'+ js_directions[i] +'<h3>Address: </h3>'+ js_address[i] +'<h3>Water Quality: </h3>'+ js_riverQuality[i] +'<h3>Water Speed: </h3>'+ js_riverDanger[i] +'</div>'+'</div>';
+	  '<div class="infoWindow">'+'<h1>'+ js_riverNames[i] + '</h1>'+'<div class="content">'+'<h3>Directions: </h3>'+ js_directions[i] +'<h3>Address: </h3>'+ js_address[i] +'<h3>Water Quality: </h3>'+ js_riverQuality[i] +'<h3>Water Speed: </h3>'+ js_riverDanger[i] +'</div>'+'</div>';
 	  
 	  infowindows[i] = new google.maps.InfoWindow({content: contentString});
 	  
