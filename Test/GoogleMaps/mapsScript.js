@@ -43,10 +43,9 @@ function initialize()
 	  markers[i].setMap(map);
 
     //Content string used to create infowindow contents
-	  var contentString = 
-	  '<div class="infoWindow">'+'<h1>'+ js_riverNames[i] + '</h1>'+'<div class="content">'+'<h3>Directions: </h3>'+ js_directions[i] +'<h3>Address: </h3>'+ js_address[i] +'<h3>Water Quality: </h3>'+ js_riverQuality[i] +'<h3>Water Speed: </h3>'+ js_riverDanger[i] +'</div>'+'</div>';
+	  var contentString = '<div class="infoWindow">' + '<p class="heading1">' + js_riverNames[i] + '</p>' + '<div class="content">' + '<p class="heading2">Directions: </p>' + js_directions[i] + '<br /><p class="heading2">Address: </p>' + js_address[i] + '<br /><p class="heading2">Water Quality: </p>' + '<p class=alignLeft>Bad</p><p class=alignRight>Good</p>' + '<div class="qualityBorder"><div class="quality" style="width:' + js_riverQuality[i]*20 + '%"></div></div>' + '<br /><p class="heading2">Water Speed: </p>' + '<p class=alignLeft>Slow</p><p class=alignRight>Fast</p>' + '<div class="dangerBorder"><div class="danger" style="width:' + js_riverDanger[i]*20 + '%"></div></div>' + '</div>' + '</div>';
 	  
-	  infowindows[i] = new google.maps.InfoWindow({content: contentString});
+	  infowindows[i] = new google.maps.InfoWindow({content: contentString, maxWidth: 250});
 	  
 	  google.maps.event.addListener(markers[i], 'click', (function(i) {return function() {infowindows[i].open(map,markers[i]);}})(i));//function() {infowindows[i].open(map,markers[i]);});
   }

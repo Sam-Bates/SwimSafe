@@ -3,14 +3,49 @@
 	clear: both;
 }
 
-.infoWindow {
-}
-
 .content {
 }
 
-h1 {
+.heading1 {
+	font-size: 20px;
+	font-weight: bold;
 }
 
-h3 {
+.heading2 {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.quality {
+	position: relative;
+	height: 100%;
+	background-color: #008AD3;
+}
+
+.qualityBorder {
+	height: 10px;
+	width: 100%;
+	background-color: #3A3B3C;
+	clear: both;
+}
+
+.danger {
+	position: relative;
+	height: 100%;
+	background-color: #008AD3;
+}
+
+.dangerBorder {
+	height: 10px;
+	width: 100%;
+	background-color: #3A3B3C;
+	clear: both;
+}
+
+.alignLeft {
+	float: left;
+}
+
+.alignRight {
+	float: right;
 }
